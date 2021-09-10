@@ -1,0 +1,59 @@
+:host {
+  position: absolute;
+  width: 100%;
+  background-color: transparent;
+  background-color: transparent;
+}
+
+p {
+  background-color: transparent;
+}
+
+a {
+  background-color: transparent;
+}
+
+.cross {
+  background-color: transparent;
+  float: right;
+  display: inline-block;
+  font-size: 1.5em;
+  cursor: pointer;
+  width: auto;
+  color: #636261;
+  opacity: .7;
+}
+
+.cross:hover {
+  opacity: 1;
+}
+
+#info {
+  position: absolute;
+  right: -100px;
+  top: 5%;
+  padding: 10px;
+  height: auto;
+  width: auto;
+  background-color: white;
+  opacity: .7;
+  animation: info 0.5s forwards;
+  animation-delay: 6s;
+  visibility: hidden;
+  border: 4px double grey;
+}
+
+#info:hover {
+  opacity: 1;
+}
+
+@keyframes info {
+  1% {
+    visibility: visible;
+  }
+
+  100% {
+    right: 10px;
+    visibility: visible;
+  }
+}

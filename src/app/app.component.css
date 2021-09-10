@@ -1,0 +1,13 @@
+:host {
+    display: grid;
+    height: 100%;
+}
+
+.container {
+  width: 90%;
+  height: 90%;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: auto auto;
+}
