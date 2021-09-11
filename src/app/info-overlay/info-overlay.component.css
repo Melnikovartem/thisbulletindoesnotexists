@@ -1,20 +1,4 @@
-:host {
-  position: absolute;
-  width: 100%;
-  background-color: transparent;
-  background-color: transparent;
-}
-
-p {
-  background-color: transparent;
-}
-
-a {
-  background-color: transparent;
-}
-
 .cross {
-  background-color: transparent;
   float: right;
   display: inline-block;
   font-size: 1.5em;
@@ -30,8 +14,8 @@ a {
 
 #info {
   position: absolute;
-  right: -100px;
-  top: 5%;
+  bottom: -100px;
+  right: 10px;
   padding: 10px;
   height: auto;
   width: auto;
@@ -53,7 +37,7 @@ a {
   }
 
   100% {
-    right: 10px;
+    bottom: 10px;
     visibility: visible;
   }
 }

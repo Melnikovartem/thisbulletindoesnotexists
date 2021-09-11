@@ -13,7 +13,9 @@ function generateNum(size: number, ) {
   styleUrls: ['./random-photo.component.css']
 })
 export class RandomPhotoComponent implements OnInit {
-  src = `./assets/imgs/seed${generateNum(3000)}.png`;
+  src = `./assets/imgs/seed${generateNum(5)}.jpeg`;
+  surname = "ВИШНЕВСКИЙ"
+  personal = "Борис Генадьевич";
   constructor() { }
 
   ngOnInit(): void { }
