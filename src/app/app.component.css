@@ -18,3 +18,17 @@
   height: 80%;
   border: 1px solid #6A91B9;
 }
+
+.label {
+  text-align: center;
+  margin-top: 10px;
+  color: #5C80A7;
+  text-shadow: 0.5px 0 #5C80A7;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.label-main {
+  color: #A36453;
+  text-shadow: 0.5px 0 #A36453;
+}

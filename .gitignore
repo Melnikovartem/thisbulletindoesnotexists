@@ -4,6 +4,7 @@
 #some folder for big files
 dist
 imgs
+texts.json
 
 # Logs
 logs

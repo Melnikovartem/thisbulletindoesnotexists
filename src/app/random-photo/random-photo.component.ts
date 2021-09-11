@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import texts from '../../assets/texts.json';
 
 function generateNum(size: number, ) {
   let len = Math.ceil(Math.log10(size));
@@ -14,9 +15,13 @@ function generateNum(size: number, ) {
 })
 export class RandomPhotoComponent implements OnInit {
   src = `./assets/imgs/seed${generateNum(5)}.jpeg`;
-  surname = "ВИШНЕВСКИЙ"
+  surname = "ВИШНЕВСКИЙ";
   personal = "Борис Генадьевич";
-  constructor() { }
+  text = [""];
+  constructor() {
+    this.text = texts.texts[Math.floor(texts.texts.length * Math.random())].split("\n");
+    console.log(this.text)
+  }
 
   ngOnInit(): void { }
 }

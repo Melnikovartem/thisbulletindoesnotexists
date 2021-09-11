@@ -14,15 +14,15 @@
 
 #info {
   position: absolute;
-  bottom: -100px;
-  right: 10px;
+  top: 40px;
+  right: -100px;
   padding: 10px;
   height: auto;
   width: auto;
   background-color: white;
-  opacity: .7;
+  opacity: .8;
   animation: info 0.5s forwards;
-  animation-delay: 6s;
+  animation-delay: 3s;
   visibility: hidden;
   border: 4px double grey;
 }
@@ -37,7 +37,7 @@
   }
 
   100% {
-    bottom: 10px;
+    right: 2%;
     visibility: visible;
   }
 }
