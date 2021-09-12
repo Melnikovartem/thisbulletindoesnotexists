@@ -13,8 +13,9 @@
 }
 
 #info {
+  max-width: 25rem;
   position: absolute;
-  top: 40px;
+  top: 1.5rem;
   right: -100px;
   padding: 10px;
   height: auto;
@@ -40,4 +41,8 @@
     right: 2%;
     visibility: visible;
   }
+}
+
+.about {
+  text-align: right;
 }
