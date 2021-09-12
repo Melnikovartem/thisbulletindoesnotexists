@@ -1,12 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import texts from '../../assets/texts.json';
+import { HttpClient } from '@angular/common/http';
 
-function generateNum(size: number, ) {
-  let len = Math.ceil(Math.log10(size));
-  let num = Math.round(Math.random() * size);
-  let s = new Array(len + 1).join("0") + num;
-  return s.substr(s.length - len);
-}
+type Data = { patronymic: string, bio: string[] };
+/*
+  function generateNum(size: number) {
+    // mot including upper bound
+    let len = Math.ceil(Math.log10(size));
+    let num = Math.floor(Math.random() * size);
+    let s = new Array(len + 1).join("0") + num;
+    return s.substr(s.length - len);
+  }
+*/
 
 @Component({
   selector: 'app-random-photo',
@@ -14,13 +18,18 @@ function generateNum(size: number, ) {
   styleUrls: ['./random-photo.component.css']
 })
 export class RandomPhotoComponent implements OnInit {
-  src = `./assets/imgs/seed${generateNum(5)}.jpeg`;
+  src = `./assets/imgs/${Math.floor(Math.random() * 3000)}.png`;
   surname = "ВИШНЕВСКИЙ";
-  personal = "Борис Генадьевич";
-  text = [""];
-  constructor() {
-    this.text = texts.texts[Math.floor(texts.texts.length * Math.random())].split("\n");
-    console.log(this.text)
+  personal = "Борис ";
+  text: string[] = [];
+  constructor(private http: HttpClient) {
+    // do NOT do it like this kids
+    let url = "https://raw.githubusercontent.com/Melnikovartem/thisbulletindoesnotexists/gh-pages/";
+    http.get(`${url}assets/texts/${Math.floor(Math.random() * 10000)}.json`)
+      .subscribe(res => {
+        this.text = (<Data>res).bio;
+        this.personal += (<Data>res).patronymic;
+      });
   }
 
   ngOnInit(): void { }

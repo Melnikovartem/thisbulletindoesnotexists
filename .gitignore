@@ -1,10 +1,14 @@
 # mac system file
 .DS_store
 
-#some folder for big files
+# big files
 dist
 imgs
-texts.json
+bios.json
+texts
+
+# jupyter
+.ipynb_checkpoints
 
 # Logs
 logs
